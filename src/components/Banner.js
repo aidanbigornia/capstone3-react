@@ -23,7 +23,7 @@ export default function Banner(){
 					  <h1 id="jumbotron-brand"> BOOKISH </h1>
 					  <br/>
 					  <br/>
-					  <br/>
+					
 					  <p id="jumbotron-fonts">#1 Habit of Most Successful People?</p>
 					  <Button variant="dark" id="jumbotron-fonts">READ</Button>
 					</Jumbotron>
