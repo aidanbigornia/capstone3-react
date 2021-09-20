@@ -1,0 +1,76 @@
+* {
+	font-family: 'Teko', sans-serif;
+}
+
+/*html.sr #jumbotron {
+    visibility: hidden;
+}*/
+
+/*NAVBAR*/
+#navbar {
+	/*opacity: 0.9;*/
+	background-color: #252932;
+}
+
+#navbar-brand {
+	color: #F18A00;
+	font-size: 1.5rem;
+	font-stretch: expanded;
+}
+#navbar-brand::after {
+	content: "MNL";
+	color: #AECEF5;
+	font-size: .75rem;
+	font-stretch: expanded;
+}
+
+
+#nav-links {
+	color: #F18A00;
+}
+
+#nav-links:hover {
+	filter: brightness(0.6);
+	transition-duration: .5s;
+}
+
+/*JUMBOTRON*/
+#jumbotron-fonts {
+	font-size: 1.2rem;
+	font-family: 'Poppins', sans-serif;
+}
+
+#jumbotron-brand {
+	font-family: 'Poppins', sans-serif;
+	font-size: 4rem;
+	font-weight: 700;
+	font-stretch: ultra-expanded;
+	color: #F18A00;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #2D3340;
+
+}
+
+#jumbotron-brand::after {
+	content: "MNL.";
+	color: #2D3340;
+}
+
+
+#jumbotron {
+	height: 70vh;
+	background: rgba( 174, 206, 245, 0.2 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 14px );
+	-webkit-backdrop-filter: blur( 14px );
+	border-radius: 10px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+	filter: contrast(110%);
+
+}
+
+#banner {
+	background-image: url(./images/banner-bg.webp);
+	background-size: cover;
+
+}
