@@ -1,5 +1,8 @@
 * {
 	font-family: 'Teko', sans-serif;
+	/*margin: 0;
+	padding: 0;
+	box-sizing: content-box;*/
 }
 
 /*html.sr #jumbotron {
@@ -55,8 +58,8 @@
 #jumbotron-brand::after {
 	content: "MNL.";
 	color: #2D3340;
+	/*text-align: center;*/
 }
-
 
 #jumbotron {
 	height: 70vh;
@@ -64,7 +67,7 @@
 	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 	backdrop-filter: blur( 10px );
 	-webkit-backdrop-filter: blur( 10px );
-	border-radius: 10px;
+	border-radius: 1px;
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 	filter: contrast(110%);
 
@@ -73,5 +76,47 @@
 #banner {
 	background-image: url(./images/banner-bg.webp);
 	background-size: cover;
+	/*width: 100vw;*/
+}
 
+
+/*REGISTER*/
+#register-password {
+	position: relative;
+    z-index: 1;
+}
+#register-password::after {
+
+	content: " should be at least 8 characters.";
+	color: #2D3340;
+	font-size: .60rem;
+}
+
+/*PRODUCTS*/
+#product-text, #product-description, #product-button {
+	font-family: 'Poppins', sans-serif;
+}
+
+#product-description {
+	color:  #3B3B40;
+	font-size:  .75rem;
+}
+
+#product-card {
+	background: rgba( 168, 208, 245, 0.25 );
+	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+	backdrop-filter: blur( 7px );
+	-webkit-backdrop-filter: blur( 7px );
+	border-radius: 20px;
+	border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#product-button {
+	border-radius: 50px;
+}
+
+#product-button:hover {
+	/*border-radius: 00px;*/
+	filter: brightness(0.7);
+	transition-duration: 2s;
 }
