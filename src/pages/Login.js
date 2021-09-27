@@ -80,8 +80,8 @@ export default function Login(){
 					icon: 'success',
 					text: `Hello ${username}`
 				})
+			}
 
-		}
 		console.log(setUser)
 		// setUser({username: username});
 
@@ -94,7 +94,7 @@ export default function Login(){
 	return (
 		(user.id !== null) ? 
 
-			<Redirect to="/" />
+			<Redirect to="/products" />
 
 		: 
 

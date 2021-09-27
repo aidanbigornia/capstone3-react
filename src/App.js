@@ -5,7 +5,12 @@ import AppNavbar from './components/AppNavbar';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Products from './pages/Products';
+import Users from './pages/Users';
 import Login from './pages/Login';
+import SpecificProduct from './pages/SpecificProduct';
+
+import ErrorPage from './components/ErrorPage';
+
 import UserContext from './UserContext';
 import './Style.css';
 
@@ -58,16 +63,20 @@ export default function App(){
 
 	return(
 		<UserContext.Provider value={{user, setUser, unsetUser}}> 
-			<BrowserRouter>
+			<BrowserRouter >
 				<AppNavbar/>
-				<Switch>
+				<Switch >
 					<Route exact path="/" component={Home} />
 					<Route exact path="/products" component={Products} />
+					<Route exact path="/users" component={Users} />
 					<Route exact path="/register" component={Register} />
 					<Route exact path="/login" component={Login} />
-					{/*<Route exact path="/courses/:courseId" component={SpecificCourse} />
-					<Route exact path="/addCourse" component={AddCourse} />
-					<Route component={ErrorPage} />*/}
+					<Route exact path="/profile/:username" component={Login} />
+					
+
+					<Route exact path="/products/:productId" component={SpecificProduct} />
+					{/*<Route exact path="/addCourse" component={AddCourse} />*/}
+					<Route component={ErrorPage} />
 				</Switch>
 			</BrowserRouter>
 		</UserContext.Provider>

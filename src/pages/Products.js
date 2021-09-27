@@ -2,12 +2,10 @@ import React, {useState, useEffect, useContext} from 'react';
 
 
 // react-bootstrap components
-import {Container, Row, Col} from 'react-bootstrap';
-// import AdminView from './../components/AdminView';
+import {Container} from 'react-bootstrap';
+import AdminView from './../components/AdminView';
 import UserView from './../components/UserView';
 import UserContext from './../UserContext';
-// components
-// import Product from './../components/Product'; //itong Course is how it will be displayed
 
 export default function Products(){
 
@@ -36,10 +34,10 @@ export default function Products(){
 	return (
 		<Container className="p-4"  id="product-wall" fluid>
 			{ (user.isAdmin === true) ?
-					{/*<AdminView courseData={products} fetchData={fetchData}/>*/}
+					<AdminView productData={products} fetchData={fetchData}/>
 				:
-				
-					<UserView productData={products} />
+					
+						<UserView productData={products} />
 
 			}
 		</Container>

@@ -73,9 +73,19 @@
 
 }
 
+
+@keyframes background-home {
+    0%{background-position:40% 50%}
+    50%{background-position:90% 50%}
+    100%{background-position:40% 50%}
+}
+
+
 #banner {
-	background-image: url(./images/banner-bg.webp);
+	background-image: url(./images/banner-bg.png);
 	background-size: cover;
+	-webkit-animation: background-home 30s ease infinite;
+
 	/*width: 100vw;*/
 }
 
@@ -93,6 +103,18 @@
 }
 
 /*PRODUCTS*/
+#bg {
+	background: linear-gradient(217deg, #868599, #FFFFFF, #F9DC5C);
+    background-size: 600% 600%;
+
+    animation: AnimationName 4s ease infinite;
+}
+
+@keyframes AnimationName {
+    0%{background-position:50% 50%}
+    50%{background-position:80% 50%}
+    100%{background-position:50% 50%}
+}
 #product-text, #product-description, #product-button {
 	font-family: 'Poppins', sans-serif;
 }
@@ -112,11 +134,79 @@
 }
 
 #product-button {
-	border-radius: 50px;
+	border-radius: 5px;
+	margin-right: 10px;
+
 }
 
 #product-button:hover {
 	/*border-radius: 00px;*/
 	filter: brightness(0.7);
 	transition-duration: 2s;
+}
+
+
+/*ADMIN VIEW*/
+#image-admin {
+	image-rendering: optimizeSpeed;
+	width: 200px;
+}
+
+.update-btn {
+	color: #F18A00;
+	background-color: #2D3340;
+	width: 100px;
+	margin-bottom: 10px;
+}
+
+#delete-btn {
+	color:#ff1231;
+	background-color:  #2E1F27;
+}
+
+#delete-btn:hover {
+	color:#2E1F27;
+	background-color:  #ff1231;
+	transition-duration: 0.5s;
+}
+
+.enable-btn {
+	color: black;
+	background-color: gray;
+	width: 100px;
+	margin-bottom: 10px;
+}
+
+.enable-btn:hover {
+	color: white;
+	background-color: green;
+	transition-duration: 0.5s;
+}
+
+.update-btn:hover {
+	color:#2D3340;
+	background-color:  #F18A00;
+	transition-duration: 0.5s;
+}
+
+#add-product-btn {
+	width: 100%;
+	border-radius: 5;
+}
+
+#admin-user-btn {
+	width:  200px;
+
+}
+
+#admin-delete-btn {
+	width:  200px;
+	margin-left: 5px;
+}
+#regular-role{
+	color: red;
+}
+
+#admin-role{
+	color: blue;
 }

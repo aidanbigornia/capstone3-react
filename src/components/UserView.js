@@ -1,18 +1,19 @@
 import React, {useState, useEffect} from 'react';
 
 import {Container} from 'react-bootstrap';
+import {Link, useParams, useHistory} from 'react-router-dom';
 
 import Product from './Product';
 
 export default function UserView({productData}){
 
-	// console.log(productData)
+	
+	console.log(productData)
 
 	const [products, setProducts] = useState([])
 
 	useEffect( () => {
 		const productsArr = productData.map( (product) => {
-			// console.log(course)
 			if(product.isActive === true){
 				return <Product key={product._id} productProp={product}/>
 			} else {
@@ -23,7 +24,7 @@ export default function UserView({productData}){
 	}, [productData])
 
 	return(
-		<Container>
+		<Container id="bg-products">
 			{/*display PRODUCTS*/}
 			{products}
 		</Container>

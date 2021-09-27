@@ -12,7 +12,7 @@ export default function AppNavbar(){
 	const {user, unsetUser} = useContext(UserContext);
 
 	let history = useHistory();
-
+	
 
 	const logout = () => {
 	  unsetUser();
@@ -22,12 +22,13 @@ export default function AppNavbar(){
 	let leftNav = (user.id !== null) ? 
 	      (user.isAdmin === true) ?
 	        <Fragment>
-	          <Nav.Link id="nav-links" as={NavLink} to="/addCourse">Add Course</Nav.Link>
+	          <Nav.Link id="nav-links" as={NavLink} to="/products">Products</Nav.Link>
+	          <Nav.Link id="nav-links" as={NavLink} to="/users">Users</Nav.Link>
 	          <Nav.Link id="nav-links" onClick={logout}>Logout</Nav.Link>
 	        </Fragment>
 	      :
 	        <Fragment>
-	        	<Nav.Link id="nav-links" as={NavLink} to="/profile">Profile</Nav.Link>
+	        	{/*<Nav.Link id="nav-links" as={NavLink} to="/profile">Profile</Nav.Link>*/}
 	        	<Nav.Link id="nav-links" as={NavLink} to="/products">Products</Nav.Link>
 	         	 <Nav.Link id="nav-links" onClick={logout}>Logout</Nav.Link>
 	        </Fragment>
